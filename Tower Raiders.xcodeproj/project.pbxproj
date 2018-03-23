@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4412065C2940009ED45 /* AppDelegate.swift */; };
+		594AB4442065C2940009ED45 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4432065C2940009ED45 /* GameScene.sks */; };
+		594AB4462065C2940009ED45 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4452065C2940009ED45 /* Actions.sks */; };
+		594AB4482065C2940009ED45 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4472065C2940009ED45 /* GameScene.swift */; };
+		594AB44A2065C2940009ED45 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4492065C2940009ED45 /* GameViewController.swift */; };
+		594AB44D2065C2940009ED45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594AB44B2065C2940009ED45 /* Main.storyboard */; };
+		594AB44F2065C2940009ED45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594AB44E2065C2940009ED45 /* Assets.xcassets */; };
+		594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4502065C2940009ED45 /* LaunchScreen.storyboard */; };
+		594AB45D2065C2940009ED45 /* Tower_RaidersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB45C2065C2940009ED45 /* Tower_RaidersTests.swift */; };
+		594AB4682065C2940009ED45 /* Tower_RaidersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		594AB4592065C2940009ED45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 594AB4362065C2930009ED45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 594AB43D2065C2930009ED45;
+			remoteInfo = "Tower Raiders";
+		};
+		594AB4642065C2940009ED45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 594AB4362065C2930009ED45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 594AB43D2065C2930009ED45;
+			remoteInfo = "Tower Raiders";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		594AB43E2065C2930009ED45 /* Tower Raiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Raiders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		594AB4412065C2940009ED45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		594AB4432065C2940009ED45 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		594AB4452065C2940009ED45 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		594AB4472065C2940009ED45 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		594AB4492065C2940009ED45 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		594AB44C2065C2940009ED45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		594AB44E2065C2940009ED45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		594AB4512065C2940009ED45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		594AB4532065C2940009ED45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594AB4582065C2940009ED45 /* Tower RaidersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower RaidersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		594AB45C2065C2940009ED45 /* Tower_RaidersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_RaidersTests.swift; sourceTree = "<group>"; };
+		594AB45E2065C2940009ED45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594AB4632065C2940009ED45 /* Tower RaidersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower RaidersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_RaidersUITests.swift; sourceTree = "<group>"; };
+		594AB4692065C2940009ED45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		594AB43B2065C2930009ED45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB4552065C2940009ED45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB4602065C2940009ED45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		594AB4352065C2930009ED45 = {
+			isa = PBXGroup;
+			children = (
+				594AB4402065C2930009ED45 /* Tower Raiders */,
+				594AB45B2065C2940009ED45 /* Tower RaidersTests */,
+				594AB4662065C2940009ED45 /* Tower RaidersUITests */,
+				594AB43F2065C2930009ED45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		594AB43F2065C2930009ED45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				594AB43E2065C2930009ED45 /* Tower Raiders.app */,
+				594AB4582065C2940009ED45 /* Tower RaidersTests.xctest */,
+				594AB4632065C2940009ED45 /* Tower RaidersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		594AB4402065C2930009ED45 /* Tower Raiders */ = {
+			isa = PBXGroup;
+			children = (
+				594AB4412065C2940009ED45 /* AppDelegate.swift */,
+				594AB4432065C2940009ED45 /* GameScene.sks */,
+				594AB4452065C2940009ED45 /* Actions.sks */,
+				594AB4472065C2940009ED45 /* GameScene.swift */,
+				594AB4492065C2940009ED45 /* GameViewController.swift */,
+				594AB44B2065C2940009ED45 /* Main.storyboard */,
+				594AB44E2065C2940009ED45 /* Assets.xcassets */,
+				594AB4502065C2940009ED45 /* LaunchScreen.storyboard */,
+				594AB4532065C2940009ED45 /* Info.plist */,
+			);
+			path = "Tower Raiders";
+			sourceTree = "<group>";
+		};
+		594AB45B2065C2940009ED45 /* Tower RaidersTests */ = {
+			isa = PBXGroup;
+			children = (
+				594AB45C2065C2940009ED45 /* Tower_RaidersTests.swift */,
+				594AB45E2065C2940009ED45 /* Info.plist */,
+			);
+			path = "Tower RaidersTests";
+			sourceTree = "<group>";
+		};
+		594AB4662065C2940009ED45 /* Tower RaidersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */,
+				594AB4692065C2940009ED45 /* Info.plist */,
+			);
+			path = "Tower RaidersUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		594AB43D2065C2930009ED45 /* Tower Raiders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594AB46C2065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower Raiders" */;
+			buildPhases = (
+				594AB43A2065C2930009ED45 /* Sources */,
+				594AB43B2065C2930009ED45 /* Frameworks */,
+				594AB43C2065C2930009ED45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tower Raiders";
+			productName = "Tower Raiders";
+			productReference = 594AB43E2065C2930009ED45 /* Tower Raiders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		594AB4572065C2940009ED45 /* Tower RaidersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594AB46F2065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower RaidersTests" */;
+			buildPhases = (
+				594AB4542065C2940009ED45 /* Sources */,
+				594AB4552065C2940009ED45 /* Frameworks */,
+				594AB4562065C2940009ED45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				594AB45A2065C2940009ED45 /* PBXTargetDependency */,
+			);
+			name = "Tower RaidersTests";
+			productName = "Tower RaidersTests";
+			productReference = 594AB4582065C2940009ED45 /* Tower RaidersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		594AB4622065C2940009ED45 /* Tower RaidersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594AB4722065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower RaidersUITests" */;
+			buildPhases = (
+				594AB45F2065C2940009ED45 /* Sources */,
+				594AB4602065C2940009ED45 /* Frameworks */,
+				594AB4612065C2940009ED45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				594AB4652065C2940009ED45 /* PBXTargetDependency */,
+			);
+			name = "Tower RaidersUITests";
+			productName = "Tower RaidersUITests";
+			productReference = 594AB4632065C2940009ED45 /* Tower RaidersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		594AB4362065C2930009ED45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Joseph Van Heurck";
+				TargetAttributes = {
+					594AB43D2065C2930009ED45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					594AB4572065C2940009ED45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 594AB43D2065C2930009ED45;
+					};
+					594AB4622065C2940009ED45 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 594AB43D2065C2930009ED45;
+					};
+				};
+			};
+			buildConfigurationList = 594AB4392065C2930009ED45 /* Build configuration list for PBXProject "Tower Raiders" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 594AB4352065C2930009ED45;
+			productRefGroup = 594AB43F2065C2930009ED45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				594AB43D2065C2930009ED45 /* Tower Raiders */,
+				594AB4572065C2940009ED45 /* Tower RaidersTests */,
+				594AB4622065C2940009ED45 /* Tower RaidersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		594AB43C2065C2930009ED45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594AB44D2065C2940009ED45 /* Main.storyboard in Resources */,
+				594AB4442065C2940009ED45 /* GameScene.sks in Resources */,
+				594AB44F2065C2940009ED45 /* Assets.xcassets in Resources */,
+				594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */,
+				594AB4462065C2940009ED45 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB4562065C2940009ED45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB4612065C2940009ED45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		594AB43A2065C2930009ED45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594AB4482065C2940009ED45 /* GameScene.swift in Sources */,
+				594AB44A2065C2940009ED45 /* GameViewController.swift in Sources */,
+				594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB4542065C2940009ED45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594AB45D2065C2940009ED45 /* Tower_RaidersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594AB45F2065C2940009ED45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594AB4682065C2940009ED45 /* Tower_RaidersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		594AB45A2065C2940009ED45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 594AB43D2065C2930009ED45 /* Tower Raiders */;
+			targetProxy = 594AB4592065C2940009ED45 /* PBXContainerItemProxy */;
+		};
+		594AB4652065C2940009ED45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 594AB43D2065C2930009ED45 /* Tower Raiders */;
+			targetProxy = 594AB4642065C2940009ED45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		594AB44B2065C2940009ED45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				594AB44C2065C2940009ED45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		594AB4502065C2940009ED45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				594AB4512065C2940009ED45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		594AB46A2065C2940009ED45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		594AB46B2065C2940009ED45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		594AB46D2065C2940009ED45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower Raiders/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-Raiders";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		594AB46E2065C2940009ED45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower Raiders/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-Raiders";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		594AB4702065C2940009ED45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower RaidersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-RaidersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Raiders.app/Tower Raiders";
+			};
+			name = Debug;
+		};
+		594AB4712065C2940009ED45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower RaidersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-RaidersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Raiders.app/Tower Raiders";
+			};
+			name = Release;
+		};
+		594AB4732065C2940009ED45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower RaidersUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-RaidersUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tower Raiders";
+			};
+			name = Debug;
+		};
+		594AB4742065C2940009ED45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tower RaidersUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jvanheurck.Tower-RaidersUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tower Raiders";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		594AB4392065C2930009ED45 /* Build configuration list for PBXProject "Tower Raiders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594AB46A2065C2940009ED45 /* Debug */,
+				594AB46B2065C2940009ED45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594AB46C2065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower Raiders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594AB46D2065C2940009ED45 /* Debug */,
+				594AB46E2065C2940009ED45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594AB46F2065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower RaidersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594AB4702065C2940009ED45 /* Debug */,
+				594AB4712065C2940009ED45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594AB4722065C2940009ED45 /* Build configuration list for PBXNativeTarget "Tower RaidersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594AB4732065C2940009ED45 /* Debug */,
+				594AB4742065C2940009ED45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 594AB4362065C2930009ED45 /* Project object */;
+}
