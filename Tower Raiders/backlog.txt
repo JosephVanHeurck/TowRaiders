@@ -1,0 +1,5 @@
+Debug Animation function
+
+Create animation vectors for dummy abilities
+
+

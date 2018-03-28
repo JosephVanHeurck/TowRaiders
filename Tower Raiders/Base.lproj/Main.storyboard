@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,76 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Tower_Raiders" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKr-Yb-cFZ">
+                                <rect key="frame" x="20" y="304" width="90" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Defend" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="defendActionSelected:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HBR-Z0-cl4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iX-Mc-1vf">
+                                <rect key="frame" x="20" y="206" width="90" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Attack" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackActionSelected:" destination="BV1-FR-VrT" eventType="touchUpInside" id="sPN-J9-8mI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdN-iH-vL7">
+                                <rect key="frame" x="118" y="304" width="90" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Swap" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="swapActionSelected:" destination="BV1-FR-VrT" eventType="touchUpInside" id="RbE-Lg-8Da"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-Y7-Sq8">
+                                <rect key="frame" x="118" y="205" width="90" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Abilities" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="abilityActionSelected:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Rre-ni-WCK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5iX-Mc-1vf" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="0kF-xc-U8r"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="IdN-iH-vL7" secondAttribute="bottom" constant="20" id="2EK-Xi-DTp"/>
+                            <constraint firstItem="Ydb-Y7-Sq8" firstAttribute="leading" secondItem="5iX-Mc-1vf" secondAttribute="trailing" constant="8" id="JE5-dX-FdN"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="tKr-Yb-cFZ" secondAttribute="bottom" constant="20" id="S3s-LG-xx8"/>
+                            <constraint firstItem="tKr-Yb-cFZ" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="TDG-l7-Qau"/>
+                            <constraint firstItem="IdN-iH-vL7" firstAttribute="leading" secondItem="tKr-Yb-cFZ" secondAttribute="trailing" constant="8" id="WMS-Ef-liX"/>
+                            <constraint firstItem="tKr-Yb-cFZ" firstAttribute="top" secondItem="5iX-Mc-1vf" secondAttribute="bottom" constant="8" id="iA6-mX-GCc"/>
+                            <constraint firstItem="IdN-iH-vL7" firstAttribute="top" secondItem="Ydb-Y7-Sq8" secondAttribute="bottom" constant="9" id="qVn-Of-gJX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="attackBtn" destination="5iX-Mc-1vf" id="fVM-ju-vvk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="115.94202898550725"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Brown Square Button" width="60" height="60"/>
+    </resources>
+    <color key="tintColor" red="0.88110893964767456" green="0.94870740175247192" blue="0.72788649797439575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

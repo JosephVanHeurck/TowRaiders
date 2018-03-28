@@ -11,19 +11,24 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    @IBOutlet weak var attackBtn: UIButton!
+    
+    // Load the SKScene from 'GameScene.sks'
+    var scene = CombatScene(fileNamed: "GameScene")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
+            
+            // Set the scale mode to scale to fit the window
                 
-                // Present the scene
-                view.presentScene(scene)
-            }
+            scene.scaleMode = .aspectFill
+                
+            // Present the scene
+            view.presentScene(scene)
+            
             
             view.ignoresSiblingOrder = true
             
@@ -51,5 +56,21 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func attackActionSelected(_ sender: UIButton) {
+        scene.setAction(type: .attack, name: "none", target: 3)
+    }
+    
+    @IBAction func abilityActionSelected(_ sender: UIButton) {
+        //scene.setAction(type: .ability, name: "none")
+    }
+    
+    @IBAction func defendActionSelected(_ sender: UIButton) {
+        //scene.setAction(type: .defend, name: "none")
+    }
+    
+    @IBAction func swapActionSelected(_ sender: UIButton) {
+        //scene.setAction(type: .swap, name: "none")
     }
 }
