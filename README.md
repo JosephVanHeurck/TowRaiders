@@ -3,6 +3,14 @@ https://github.com/JosephVanHeurck/towRaiders
 
 SID: 215077234
 
+# Game's Current State
+- Game starts up in the combat module in a test state
+- Player can play their first turn and can only use the attack action
+
+# Setup
+- Open "Tower Raiders.xcodeproj" to access project in xcode
+- Run Game using the play button
+
 # Henry comments 2/April
 
 (Henry is expecting a readme.md, licenses.txt, and changelog.whatever)
