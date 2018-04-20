@@ -14,11 +14,8 @@ SID: 215077234
 - You're still missing a licenses.txt file.
 
 # Joseph update 20/April
-Sorry about the not having the readme displayed I seem to have a problem with
-syncing my desktop github folder with github.com. Although that doesnt excuse
-the lack of commits recently.
-I've moved the changelog that was in my original readme file into a dedicated
-changelog.txt, made a licences.txt and created the data files as required of me.
+Sorry about the not having the readme displayed I seem to have a problem with syncing my desktop github folder with github.com. Although that doesnt excuse the lack of commits recently.
+I've moved the changelog that was in my original readme file into a dedicated changelog.txt, made a licences.txt and created the data files as required of me.
 Again, sorry for the lack of commits, theres no excuse. And thanks for reminding me.
 
 Currently I'm a bit behind schedule as the combat module hasn't been tested in full yet. Upon creating a bunch of fitting test data in PlayerPartyData.csv and CombatEnemyData.csv located in the "Data/Session Data" and WeaponList.csv in "Data/Account Data" I will be able to test and tweak the majority of the combat module.
