@@ -11,6 +11,19 @@ SID: 215077234
 - Open "Tower Raiders.xcodeproj" to access project in xcode
 - Run Game using the play button
 
+# Directory Structure
+- Master Directory (contains backlog.txt, changelog.txt, licences.txt and README.md)
+  - Tower Raiders (Contains all the important project files)
+     - Assets.xcassets (contains all assets)
+     - Base.Iproj (contains storyboards for screens)
+     - Data (contains data files)
+      - Session Data (contains data relevant to current Exploration)
+      - Account Data (contains all data revelant to the player's account or in this case save)
+      - Game Data (contains all base statistics for game objects and characters as well as dialogue scripts)
+      - Animation (contains data of animation items to be used in combat)
+  - Tower RaiderTests (Excess files used for testing purposes)
+  - Tower RaiderTestsUI (Excess files used for testing purposes)
+
 # Henry comments 2/April
 
 (Henry is expecting a readme.md, licenses.txt, and changelog.whatever)
