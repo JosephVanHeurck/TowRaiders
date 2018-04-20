@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TowRaiders
 https://github.com/JosephVanHeurck/towRaiders
 
@@ -15,7 +14,7 @@ SID: 215077234
 - I couldn't find your text-based data. Create a root folder "data/" and put all your JSON files in there.
 - You're still missing a licenses.txt file.
 
-# Joseph comments 20/April
+# Joseph update 20/April
 Sorry about the not having the readme displayed I seem to have a problem with
 syncing my desktop github folder with github.com. Although that doesnt excuse
 the lack of commits recently.
@@ -28,5 +27,3 @@ Currently I'm a bit behind schedule as the combat module hasn't been tested in f
 Once I've finished with the Combat Module I will move on to the Exploration and Hub Modules. As I am behind they will cut into time planned for user testing.
 
 As for asset creation, my artist is now in the final phases of map creation and will soon move on to character design.
-
->>>>>>> f599bf7445d95b8f382487b2b830e097317583fe
