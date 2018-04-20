@@ -1,0 +1,7 @@
+﻿Template Code,Template Name,Target,Texture,Style,Start Time,End Time
+UA,User Attack,U,idle,none,0,0.5
+,,U,attack,none,0.5,1.5
+TR,Target Received Attack,T,idle,none,0,0.3
+,,T,brace,none,0.3,0.5
+,,T,brace,damagedFadeCycle,0.5,1
+,,T,idle,none,1,1.5

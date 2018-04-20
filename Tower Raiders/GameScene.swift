@@ -226,6 +226,36 @@ class CombatScene : SKScene {
     }
     
     func animate() {
+        // test animation //
+        /*
+         var targetAct = [SKAction]()
+         var targetNumbersAct = [SKAction]()
+         var targetNumbersAct2 = [SKAction]()
+         
+         let interval: Double = 0.1
+         
+         targetAct.append(SKAction.wait(forDuration: 0.5))
+         targetAct.append(SKAction.setTexture(SKTexture(imageNamed: "braceEvilKnight")))
+         targetAct.append(SKAction.wait(forDuration: 0.2))
+         targetAct.append(SKAction.fadeOut(withDuration: interval))
+         targetAct.append(SKAction.fadeIn(withDuration: interval))
+         targetAct.append(SKAction.fadeOut(withDuration: interval))
+         targetAct.append(SKAction.fadeIn(withDuration: interval))
+         targetAct.append(SKAction.setTexture(SKTexture(imageNamed: "idleEvilKnight")))
+         
+         targetNumbersAct.append(SKAction.wait(forDuration: 0.7))
+         targetNumbersAct2.append(SKAction.wait(forDuration: 0.7))
+         targetNumbersAct.append(SKAction.colorize(with: UIColor.red, colorBlendFactor: 1, duration: 0))
+         targetNumbersAct.append(SKAction.move(by: CGVector(dx: 0, dy: 100), duration: 1))
+         targetNumbersAct2.append(SKAction.fadeIn(withDuration: 0))
+         targetNumbersAct2.append(SKAction.fadeOut(withDuration: 1))
+         
+         charNode3.run(SKAction.sequence(targetAct))
+         feedbackLblNode3.run(SKAction.sequence(targetNumbersAct))
+         feedbackLblNode3.run(SKAction.sequence(targetNumbersAct2))*/
+        ////////////////////
+        
+        
         // action vectors used for animation
         var actUserAnimation = [SKAction]()
         
@@ -259,7 +289,7 @@ class CombatScene : SKScene {
         
         for a in userAnimation {
             var interval: Double
-            interval = a.startTime - a.endTime
+            interval = a.endTime - a.startTime
             var texture: SKTexture
             
             // add wait action to list if no immediate animation item
@@ -288,20 +318,29 @@ class CombatScene : SKScene {
                     actUserNumbers.append(SKAction.wait(forDuration: a.startTime))
                     actUserNumbers2.append(SKAction.wait(forDuration: a.startTime))
                 }
+                actUserNumbers.append(SKAction.run({self.setNodeText(a.texture, UInt(self.currentCharacter.ID))}))
                 let originalPosition: CGPoint = defaultFbackLblPos[Int(currentCharacter.ID)]
                 actUserNumbers.append(SKAction.move(to: originalPosition, duration: 0))
                 //actUserNumbers.append(SKAction.colorize(withColorBlendFactor: 1, duration: interval))
+                
                 if a.style == .damageNumber {
                     actUserNumbers.append(SKAction.colorize(with: UIColor.red, colorBlendFactor: 1, duration: 0))
                 }
                 else {
                     actUserNumbers.append(SKAction.colorize(with: UIColor.green, colorBlendFactor: 1, duration: 0))
                 }
-                actUserNumbers.append(SKAction.unhide())
-                actUserNumbers.append(SKAction.move(by: CGVector(dx: 0, dy: 20), duration: interval))
+                
+                actUserNumbers2.append(SKAction.fadeIn(withDuration: 0))
+                actUserNumbers.append(SKAction.move(by: CGVector(dx: 0, dy: 100), duration: interval))
                 actUserNumbers2.append(SKAction.fadeOut(withDuration: interval))
+                
             }
         }
+        if !userAnimation.isEmpty {
+            let texture = SKTexture(imageNamed: "idle" + currentCharacter.textureName)
+            actUserAnimation.append(SKAction.setTexture(texture))
+        }
+        
         var targets = [Int]()
         if targetAnimation[0].animationTarget == .singleEnemy || targetAnimation[0].animationTarget == .singleAlly {
             targets.append(actTarget)
@@ -313,15 +352,16 @@ class CombatScene : SKScene {
             targets.append(contentsOf:[3,4,5])
         }
         
-        for a in targetAnimation {
+        for t in targets {
             // COPY CODE IN userAnimation SCOPE
-            for t in targets {
+            for a in targetAnimation {
                 var interval: Double
-                interval = a.startTime - a.endTime
+                interval = a.endTime - a.startTime
                 var texture: SKTexture
                 
                 var targetChar: Character!
                 
+                // no longer in use
                 for i in characterList {
                     if i.ID == t {
                         targetChar = i
@@ -331,6 +371,7 @@ class CombatScene : SKScene {
                 // add wait action to list if no immediate animation item
                 if actTargetAnimation[t].isEmpty && a.startTime > 0 {
                     actTargetAnimation[t].append(SKAction.wait(forDuration: a.startTime))
+                    // this block isn't being used??
                 }
                 if a.style != .damageNumber && a.style != .healingNumber {
                     // adding texture setting action and waiting action to animation list
@@ -347,26 +388,38 @@ class CombatScene : SKScene {
                     default:
                         actTargetAnimation[t].append(SKAction.wait(forDuration: interval))
                     }
-                    
                 }
                 else {
-                    if actTargetNumbers.isEmpty && a.startTime > 0 {
+                    if actTargetNumbers[t].isEmpty && a.startTime > 0 {
                         actTargetNumbers[t].append(SKAction.wait(forDuration: a.startTime))
                         actTargetNumbers2[t].append(SKAction.wait(forDuration: a.startTime))
+                        
                     }
+                    actTargetNumbers[t].append(SKAction.run({self.setNodeText(a.texture, UInt(t))}))
                     let originalPosition: CGPoint = defaultFbackLblPos[t]
                     actTargetNumbers[t].append(SKAction.move(to: originalPosition, duration: 0))
-                    //actUserNumbers.append(SKAction.colorize(withColorBlendFactor: 1, duration: interval))
                     if a.style == .damageNumber {
                         actTargetNumbers[t].append(SKAction.colorize(with: UIColor.red, colorBlendFactor: 1, duration: 0))
                     }
                     else {
                         actTargetNumbers[t].append(SKAction.colorize(with: UIColor.green, colorBlendFactor: 1, duration: 0))
                     }
-                    actTargetNumbers[t].append(SKAction.unhide())
-                    actTargetNumbers[t].append(SKAction.move(by: CGVector(dx: 0, dy: 20), duration: interval))
+                    
+                    actTargetNumbers2[t].append(SKAction.fadeIn(withDuration: 0))
+                    actTargetNumbers[t].append(SKAction.move(by: CGVector(dx: 0, dy: 100), duration: interval))
                     actTargetNumbers2[t].append(SKAction.fadeOut(withDuration: interval))
                 }
+            }
+            
+            if !actTargetAnimation[t].isEmpty {
+                var targetChar: Character!
+                for i in characterList {
+                    if i.ID == t {
+                        targetChar = i
+                    }
+                }
+                let texture = SKTexture(imageNamed: "idle" + targetChar.textureName)
+                actTargetAnimation[t].append(SKAction.setTexture(texture))
             }
         }
         
@@ -434,7 +487,26 @@ class CombatScene : SKScene {
         
         // running end timer action sequence
         charNode0.run(SKAction.sequence(actEnd))
-        
+ 
+    }
+    
+    func setNodeText(_ text: String, _ node: UInt) {
+        switch node {
+        case 0:
+            feedbackLblNode0.text = text
+        case 1:
+            feedbackLblNode1.text = text
+        case 2:
+            feedbackLblNode2.text = text
+        case 3:
+            feedbackLblNode3.text = text
+        case 4:
+            feedbackLblNode4.text = text
+        case 5:
+            feedbackLblNode5.text = text
+        default:
+            break
+        }
     }
     
     // is executed when SKAction sequence is finished
@@ -478,6 +550,11 @@ class GameScene: CombatScene {
         charNode3 = self.childNode(withName: "Char3") as! SKSpriteNode
         charNode4 = self.childNode(withName: "Char4") as! SKSpriteNode
         charNode5 = self.childNode(withName: "Char5") as! SKSpriteNode
+        
+        // testing Scribe readFile function
+        /*var scribe = Scribe()
+        var myWeaponList = scribe.readFile(withName: "WeaponList")
+        */
         
         var dummyAbilities = [abilityInfo]()
         /*

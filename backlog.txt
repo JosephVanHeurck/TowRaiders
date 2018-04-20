@@ -1,0 +1,11 @@
+////// Debugging Report for Animation function //////
+// Root Bug
+// Interval variable calulated wrong, resulting in a negative value,
+// thus causing wait, move and fade in/out periods to either be 0 or causing SKAction functions to not work at all
+
+find out why files can't be read
+
+alter and clean animation algorithm so it listens for T instead of single enemy, single allies, etc and U instead of user
+
+have animation function parse damage/healing value as a parameter
+have animation function alter damage values based on keyword mod's percentage in texture value

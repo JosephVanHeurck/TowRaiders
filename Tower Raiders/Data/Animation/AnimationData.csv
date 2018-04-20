@@ -1,0 +1,10 @@
+﻿ID,Name,Template Code?,Target,Texture,Style,Start Time,End Time
+0,Default Attack,UA,,,,,
+,,TR,,,,,
+,,,T,MOD,damage number,1,1.5
+1,Dual Slash,UA,,,,,
+,,TR,,,,,
+,,,T,MOD 50%,damage number,1,1.5
+,,UA,,,,,
+,,TR,,,,,
+,,,T,MOD 50%,damage number,2.5,3

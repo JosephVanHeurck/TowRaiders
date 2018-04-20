@@ -1,0 +1,17 @@
+Changelog:
+-- Week 3 --
+* 23rd March:
+created action buttons for combat UI
+created backlog.txt
+-- Week 4 --
+* 28th March:
+programmed combat logic structure
+programmed animation function (Note: needs debugging)
+-- Week 5 --
+* 13th April
+successfuly debugged animate function
+-- Week 6 --
+* 20th April
+created csv data files for data structures located in "Tower Raider/Data" (Note: currently only contains text data)
+began creating File handler class called "Scribe" (Note: needs debugging)
+created licences.txt, changelog.txt and updated README.md

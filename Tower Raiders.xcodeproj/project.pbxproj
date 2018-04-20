@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5913629520899E9300DD5863 /* licences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5913629420899E9300DD5863 /* licences.txt */; };
+		5913629720899EAA00DD5863 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5913629620899EAA00DD5863 /* README.md */; };
+		591362992089A10000DD5863 /* changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 591362982089A10000DD5863 /* changelog.txt */; };
+		5915EA4C20899BA800553102 /* WeaponList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5915EA4B20899BA700553102 /* WeaponList.csv */; };
 		594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4412065C2940009ED45 /* AppDelegate.swift */; };
 		594AB4442065C2940009ED45 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4432065C2940009ED45 /* GameScene.sks */; };
 		594AB4462065C2940009ED45 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4452065C2940009ED45 /* Actions.sks */; };
@@ -17,6 +21,7 @@
 		594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4502065C2940009ED45 /* LaunchScreen.storyboard */; };
 		594AB45D2065C2940009ED45 /* Tower_RaidersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB45C2065C2940009ED45 /* Tower_RaidersTests.swift */; };
 		594AB4682065C2940009ED45 /* Tower_RaidersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */; };
+		59C7FA23208879D7009FC250 /* InputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7FA22208879D7009FC250 /* InputOutput.swift */; };
 		59E9E351206862FB0076EC35 /* backlog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59E9E350206862FB0076EC35 /* backlog.txt */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5913629420899E9300DD5863 /* licences.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = licences.txt; sourceTree = "<group>"; };
+		5913629620899EAA00DD5863 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		591362982089A10000DD5863 /* changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
+		5915EA4B20899BA700553102 /* WeaponList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WeaponList.csv; path = "Data/Account Data/WeaponList.csv"; sourceTree = "<group>"; };
 		594AB43E2065C2930009ED45 /* Tower Raiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Raiders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594AB4412065C2940009ED45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		594AB4432065C2940009ED45 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -54,6 +63,7 @@
 		594AB4632065C2940009ED45 /* Tower RaidersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower RaidersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_RaidersUITests.swift; sourceTree = "<group>"; };
 		594AB4692065C2940009ED45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59C7FA22208879D7009FC250 /* InputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOutput.swift; sourceTree = "<group>"; };
 		59E9E350206862FB0076EC35 /* backlog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = backlog.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +95,10 @@
 		594AB4352065C2930009ED45 = {
 			isa = PBXGroup;
 			children = (
+				591362982089A10000DD5863 /* changelog.txt */,
+				5913629620899EAA00DD5863 /* README.md */,
+				5913629420899E9300DD5863 /* licences.txt */,
+				59E9E350206862FB0076EC35 /* backlog.txt */,
 				594AB4402065C2930009ED45 /* Tower Raiders */,
 				594AB45B2065C2940009ED45 /* Tower RaidersTests */,
 				594AB4662065C2940009ED45 /* Tower RaidersUITests */,
@@ -105,6 +119,7 @@
 		594AB4402065C2930009ED45 /* Tower Raiders */ = {
 			isa = PBXGroup;
 			children = (
+				5915EA4B20899BA700553102 /* WeaponList.csv */,
 				594AB4412065C2940009ED45 /* AppDelegate.swift */,
 				594AB4432065C2940009ED45 /* GameScene.sks */,
 				594AB4452065C2940009ED45 /* Actions.sks */,
@@ -114,7 +129,7 @@
 				594AB44E2065C2940009ED45 /* Assets.xcassets */,
 				594AB4502065C2940009ED45 /* LaunchScreen.storyboard */,
 				594AB4532065C2940009ED45 /* Info.plist */,
-				59E9E350206862FB0076EC35 /* backlog.txt */,
+				59C7FA22208879D7009FC250 /* InputOutput.swift */,
 			);
 			path = "Tower Raiders";
 			sourceTree = "<group>";
@@ -244,12 +259,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5913629520899E9300DD5863 /* licences.txt in Resources */,
 				59E9E351206862FB0076EC35 /* backlog.txt in Resources */,
 				594AB44D2065C2940009ED45 /* Main.storyboard in Resources */,
 				594AB4442065C2940009ED45 /* GameScene.sks in Resources */,
 				594AB44F2065C2940009ED45 /* Assets.xcassets in Resources */,
+				591362992089A10000DD5863 /* changelog.txt in Resources */,
 				594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */,
+				5913629720899EAA00DD5863 /* README.md in Resources */,
 				594AB4462065C2940009ED45 /* Actions.sks in Resources */,
+				5915EA4C20899BA800553102 /* WeaponList.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				594AB4482065C2940009ED45 /* GameScene.swift in Sources */,
+				59C7FA23208879D7009FC250 /* InputOutput.swift in Sources */,
 				594AB44A2065C2940009ED45 /* GameViewController.swift in Sources */,
 				594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */,
 			);
