@@ -44,3 +44,10 @@ Currently I'm a bit behind schedule as the combat module hasn't been tested in f
 Once I've finished with the Combat Module I will move on to the Exploration and Hub Modules. As I am behind they will cut into time planned for user testing.
 
 As for asset creation, my artist is now in the final phases of map creation and will soon move on to character design.
+
+# Henry comments 27/April
+- I haven't seen any updates in a few days?
+- Great to see you starting to work with data.
+- Your changelog needs a lot of work
+- It's the end of Week 7, I suspect you just need to be spending a lot more time on this to make progress, that's all :)
+
