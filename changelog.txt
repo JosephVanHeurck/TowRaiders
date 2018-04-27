@@ -15,3 +15,14 @@ successfuly debugged animate function
 created csv data files for data structures located in "Tower Raider/Data" (Note: currently only contains text data)
 began creating File handler class called "Scribe" (Note: needs debugging)
 created licences.txt, changelog.txt and updated README.md
+-- Week 7 --
+* 25th April
+Finished debugging Scribe class
+* 26th April
+Began Exploration Module
+Created positional data for places on 'Map1'
+Created randomly generated routing(Note: needs debugging to prevent small chance of crash)
+* 27th April
+Created 'Next' Button that moves the player to the next step(place)
+
+

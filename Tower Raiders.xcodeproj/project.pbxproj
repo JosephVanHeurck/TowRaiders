@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590074FF209198F700D022F9 /* MapExplorationPlaces1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 590074FE209198F700D022F9 /* MapExplorationPlaces1.csv */; };
+		590DE0F92092CFEE00141D14 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DE0F82092CFEE00141D14 /* EventViewController.swift */; };
+		590DE0FB2092D01000141D14 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590DE0FA2092D01000141D14 /* Event.storyboard */; };
 		5913629520899E9300DD5863 /* licences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5913629420899E9300DD5863 /* licences.txt */; };
 		5913629720899EAA00DD5863 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5913629620899EAA00DD5863 /* README.md */; };
 		591362992089A10000DD5863 /* changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 591362982089A10000DD5863 /* changelog.txt */; };
-		5915EA4C20899BA800553102 /* WeaponList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5915EA4B20899BA700553102 /* WeaponList.csv */; };
 		594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4412065C2940009ED45 /* AppDelegate.swift */; };
 		594AB4442065C2940009ED45 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4432065C2940009ED45 /* GameScene.sks */; };
 		594AB4462065C2940009ED45 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4452065C2940009ED45 /* Actions.sks */; };
@@ -21,6 +23,33 @@
 		594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4502065C2940009ED45 /* LaunchScreen.storyboard */; };
 		594AB45D2065C2940009ED45 /* Tower_RaidersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB45C2065C2940009ED45 /* Tower_RaidersTests.swift */; };
 		594AB4682065C2940009ED45 /* Tower_RaidersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */; };
+		596EA4F9208D455600138FAD /* PlayerCharacterList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4F7208D455600138FAD /* PlayerCharacterList.csv */; };
+		596EA4FA208D455600138FAD /* PlayerWeaponList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4F8208D455600138FAD /* PlayerWeaponList.csv */; };
+		596EA4FD208D457900138FAD /* CombatEnemyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FB208D457800138FAD /* CombatEnemyData.csv */; };
+		596EA4FE208D457900138FAD /* CombatEnemyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FB208D457800138FAD /* CombatEnemyData.csv */; };
+		596EA4FF208D457900138FAD /* CombatEnemyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FB208D457800138FAD /* CombatEnemyData.csv */; };
+		596EA500208D457900138FAD /* PlayerPartyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FC208D457800138FAD /* PlayerPartyData.csv */; };
+		596EA501208D457900138FAD /* PlayerPartyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FC208D457800138FAD /* PlayerPartyData.csv */; };
+		596EA502208D457900138FAD /* PlayerPartyData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA4FC208D457800138FAD /* PlayerPartyData.csv */; };
+		596EA506208D458100138FAD /* ClassBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA503208D458100138FAD /* ClassBaseStats.csv */; };
+		596EA507208D458100138FAD /* ClassBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA503208D458100138FAD /* ClassBaseStats.csv */; };
+		596EA508208D458100138FAD /* ClassBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA503208D458100138FAD /* ClassBaseStats.csv */; };
+		596EA509208D458100138FAD /* WeaponBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA504208D458100138FAD /* WeaponBaseStats.csv */; };
+		596EA50A208D458100138FAD /* WeaponBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA504208D458100138FAD /* WeaponBaseStats.csv */; };
+		596EA50B208D458100138FAD /* WeaponBaseStats.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA504208D458100138FAD /* WeaponBaseStats.csv */; };
+		596EA50C208D458100138FAD /* Abilities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA505208D458100138FAD /* Abilities.csv */; };
+		596EA50D208D458100138FAD /* Abilities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA505208D458100138FAD /* Abilities.csv */; };
+		596EA50E208D458100138FAD /* Abilities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA505208D458100138FAD /* Abilities.csv */; };
+		596EA511208D458900138FAD /* AnimationData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA50F208D458900138FAD /* AnimationData.csv */; };
+		596EA512208D458900138FAD /* AnimationData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA50F208D458900138FAD /* AnimationData.csv */; };
+		596EA513208D458900138FAD /* AnimationData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA50F208D458900138FAD /* AnimationData.csv */; };
+		596EA514208D458900138FAD /* AnimationTemplateData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA510208D458900138FAD /* AnimationTemplateData.csv */; };
+		596EA515208D458900138FAD /* AnimationTemplateData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA510208D458900138FAD /* AnimationTemplateData.csv */; };
+		596EA516208D458900138FAD /* AnimationTemplateData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 596EA510208D458900138FAD /* AnimationTemplateData.csv */; };
+		59A670142091578700B5F00B /* Exploration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A670132091578700B5F00B /* Exploration.storyboard */; };
+		59A670162091588600B5F00B /* ExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A670152091588600B5F00B /* ExplorationViewController.swift */; };
+		59A67018209159DD00B5F00B /* ExplorationScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59A67017209159DD00B5F00B /* ExplorationScene.sks */; };
+		59A6701A20915AFC00B5F00B /* ExplorationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A6701920915AFC00B5F00B /* ExplorationScene.swift */; };
 		59C7FA23208879D7009FC250 /* InputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7FA22208879D7009FC250 /* InputOutput.swift */; };
 		59E9E351206862FB0076EC35 /* backlog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59E9E350206862FB0076EC35 /* backlog.txt */; };
 /* End PBXBuildFile section */
@@ -43,10 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		590074FE209198F700D022F9 /* MapExplorationPlaces1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MapExplorationPlaces1.csv; path = "Tower Raiders/Data/Game Data/MapExplorationPlaces1.csv"; sourceTree = "<group>"; };
+		590DE0F82092CFEE00141D14 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		590DE0FA2092D01000141D14 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		5913629420899E9300DD5863 /* licences.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = licences.txt; sourceTree = "<group>"; };
 		5913629620899EAA00DD5863 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		591362982089A10000DD5863 /* changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
-		5915EA4B20899BA700553102 /* WeaponList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WeaponList.csv; path = "Data/Account Data/WeaponList.csv"; sourceTree = "<group>"; };
 		594AB43E2065C2930009ED45 /* Tower Raiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Raiders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594AB4412065C2940009ED45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		594AB4432065C2940009ED45 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -63,6 +94,19 @@
 		594AB4632065C2940009ED45 /* Tower RaidersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower RaidersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594AB4672065C2940009ED45 /* Tower_RaidersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_RaidersUITests.swift; sourceTree = "<group>"; };
 		594AB4692065C2940009ED45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		596EA4F7208D455600138FAD /* PlayerCharacterList.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlayerCharacterList.csv; path = "Tower Raiders/Data/Account Data/PlayerCharacterList.csv"; sourceTree = "<group>"; };
+		596EA4F8208D455600138FAD /* PlayerWeaponList.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlayerWeaponList.csv; path = "Tower Raiders/Data/Account Data/PlayerWeaponList.csv"; sourceTree = "<group>"; };
+		596EA4FB208D457800138FAD /* CombatEnemyData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CombatEnemyData.csv; path = "Tower Raiders/Data/Session Data/CombatEnemyData.csv"; sourceTree = "<group>"; };
+		596EA4FC208D457800138FAD /* PlayerPartyData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PlayerPartyData.csv; path = "Tower Raiders/Data/Session Data/PlayerPartyData.csv"; sourceTree = "<group>"; };
+		596EA503208D458100138FAD /* ClassBaseStats.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ClassBaseStats.csv; path = "Tower Raiders/Data/Game Data/ClassBaseStats.csv"; sourceTree = "<group>"; };
+		596EA504208D458100138FAD /* WeaponBaseStats.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WeaponBaseStats.csv; path = "Tower Raiders/Data/Game Data/WeaponBaseStats.csv"; sourceTree = "<group>"; };
+		596EA505208D458100138FAD /* Abilities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Abilities.csv; path = "Tower Raiders/Data/Game Data/Abilities.csv"; sourceTree = "<group>"; };
+		596EA50F208D458900138FAD /* AnimationData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AnimationData.csv; path = "Tower Raiders/Data/Animation/AnimationData.csv"; sourceTree = "<group>"; };
+		596EA510208D458900138FAD /* AnimationTemplateData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AnimationTemplateData.csv; path = "Tower Raiders/Data/Animation/AnimationTemplateData.csv"; sourceTree = "<group>"; };
+		59A670132091578700B5F00B /* Exploration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exploration.storyboard; sourceTree = "<group>"; };
+		59A670152091588600B5F00B /* ExplorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationViewController.swift; sourceTree = "<group>"; };
+		59A67017209159DD00B5F00B /* ExplorationScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplorationScene.sks; sourceTree = "<group>"; };
+		59A6701920915AFC00B5F00B /* ExplorationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationScene.swift; sourceTree = "<group>"; };
 		59C7FA22208879D7009FC250 /* InputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOutput.swift; sourceTree = "<group>"; };
 		59E9E350206862FB0076EC35 /* backlog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = backlog.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +139,16 @@
 		594AB4352065C2930009ED45 = {
 			isa = PBXGroup;
 			children = (
+				596EA4F7208D455600138FAD /* PlayerCharacterList.csv */,
+				596EA4F8208D455600138FAD /* PlayerWeaponList.csv */,
+				596EA4FB208D457800138FAD /* CombatEnemyData.csv */,
+				596EA4FC208D457800138FAD /* PlayerPartyData.csv */,
+				596EA505208D458100138FAD /* Abilities.csv */,
+				596EA503208D458100138FAD /* ClassBaseStats.csv */,
+				596EA504208D458100138FAD /* WeaponBaseStats.csv */,
+				596EA50F208D458900138FAD /* AnimationData.csv */,
+				596EA510208D458900138FAD /* AnimationTemplateData.csv */,
+				590074FE209198F700D022F9 /* MapExplorationPlaces1.csv */,
 				591362982089A10000DD5863 /* changelog.txt */,
 				5913629620899EAA00DD5863 /* README.md */,
 				5913629420899E9300DD5863 /* licences.txt */,
@@ -119,7 +173,6 @@
 		594AB4402065C2930009ED45 /* Tower Raiders */ = {
 			isa = PBXGroup;
 			children = (
-				5915EA4B20899BA700553102 /* WeaponList.csv */,
 				594AB4412065C2940009ED45 /* AppDelegate.swift */,
 				594AB4432065C2940009ED45 /* GameScene.sks */,
 				594AB4452065C2940009ED45 /* Actions.sks */,
@@ -130,6 +183,12 @@
 				594AB4502065C2940009ED45 /* LaunchScreen.storyboard */,
 				594AB4532065C2940009ED45 /* Info.plist */,
 				59C7FA22208879D7009FC250 /* InputOutput.swift */,
+				59A670132091578700B5F00B /* Exploration.storyboard */,
+				59A670152091588600B5F00B /* ExplorationViewController.swift */,
+				59A67017209159DD00B5F00B /* ExplorationScene.sks */,
+				59A6701920915AFC00B5F00B /* ExplorationScene.swift */,
+				590DE0F82092CFEE00141D14 /* EventViewController.swift */,
+				590DE0FA2092D01000141D14 /* Event.storyboard */,
 			);
 			path = "Tower Raiders";
 			sourceTree = "<group>";
@@ -259,16 +318,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596EA4F9208D455600138FAD /* PlayerCharacterList.csv in Resources */,
+				596EA514208D458900138FAD /* AnimationTemplateData.csv in Resources */,
+				596EA509208D458100138FAD /* WeaponBaseStats.csv in Resources */,
+				590DE0FB2092D01000141D14 /* Event.storyboard in Resources */,
+				596EA4FA208D455600138FAD /* PlayerWeaponList.csv in Resources */,
 				5913629520899E9300DD5863 /* licences.txt in Resources */,
 				59E9E351206862FB0076EC35 /* backlog.txt in Resources */,
+				590074FF209198F700D022F9 /* MapExplorationPlaces1.csv in Resources */,
 				594AB44D2065C2940009ED45 /* Main.storyboard in Resources */,
 				594AB4442065C2940009ED45 /* GameScene.sks in Resources */,
 				594AB44F2065C2940009ED45 /* Assets.xcassets in Resources */,
+				596EA4FD208D457900138FAD /* CombatEnemyData.csv in Resources */,
+				596EA506208D458100138FAD /* ClassBaseStats.csv in Resources */,
 				591362992089A10000DD5863 /* changelog.txt in Resources */,
+				596EA500208D457900138FAD /* PlayerPartyData.csv in Resources */,
 				594AB4522065C2940009ED45 /* LaunchScreen.storyboard in Resources */,
+				59A67018209159DD00B5F00B /* ExplorationScene.sks in Resources */,
+				596EA50C208D458100138FAD /* Abilities.csv in Resources */,
+				59A670142091578700B5F00B /* Exploration.storyboard in Resources */,
+				596EA511208D458900138FAD /* AnimationData.csv in Resources */,
 				5913629720899EAA00DD5863 /* README.md in Resources */,
 				594AB4462065C2940009ED45 /* Actions.sks in Resources */,
-				5915EA4C20899BA800553102 /* WeaponList.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +347,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596EA501208D457900138FAD /* PlayerPartyData.csv in Resources */,
+				596EA50D208D458100138FAD /* Abilities.csv in Resources */,
+				596EA50A208D458100138FAD /* WeaponBaseStats.csv in Resources */,
+				596EA515208D458900138FAD /* AnimationTemplateData.csv in Resources */,
+				596EA4FE208D457900138FAD /* CombatEnemyData.csv in Resources */,
+				596EA507208D458100138FAD /* ClassBaseStats.csv in Resources */,
+				596EA512208D458900138FAD /* AnimationData.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +361,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596EA502208D457900138FAD /* PlayerPartyData.csv in Resources */,
+				596EA50E208D458100138FAD /* Abilities.csv in Resources */,
+				596EA50B208D458100138FAD /* WeaponBaseStats.csv in Resources */,
+				596EA516208D458900138FAD /* AnimationTemplateData.csv in Resources */,
+				596EA4FF208D457900138FAD /* CombatEnemyData.csv in Resources */,
+				596EA508208D458100138FAD /* ClassBaseStats.csv in Resources */,
+				596EA513208D458900138FAD /* AnimationData.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +380,10 @@
 			files = (
 				594AB4482065C2940009ED45 /* GameScene.swift in Sources */,
 				59C7FA23208879D7009FC250 /* InputOutput.swift in Sources */,
+				590DE0F92092CFEE00141D14 /* EventViewController.swift in Sources */,
 				594AB44A2065C2940009ED45 /* GameViewController.swift in Sources */,
+				59A670162091588600B5F00B /* ExplorationViewController.swift in Sources */,
+				59A6701A20915AFC00B5F00B /* ExplorationScene.swift in Sources */,
 				594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

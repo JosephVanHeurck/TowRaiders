@@ -4,8 +4,8 @@ https://github.com/JosephVanHeurck/towRaiders
 SID: 215077234
 
 # Game's Current State
-- Game starts up in the combat module in a test state
-- Player can play their first turn and can only use the attack action
+- Game now starts up in exploration mode
+- Player can take steps throw the map, however no events will occur
 
 # Setup
 - Open "Tower Raiders.xcodeproj" to access project in xcode
@@ -51,3 +51,8 @@ As for asset creation, my artist is now in the final phases of map creation and 
 - Your changelog needs a lot of work
 - It's the end of Week 7, I suspect you just need to be spending a lot more time on this to make progress, that's all :)
 
+# Joseph update 27/April
+I have finished developing the player's movement on the map in exploration map
+It involves the game first plotting a route of 9 places out of 18 places whos locations that are specified in a csv file
+I wanted to have a simple event occur, that upon reaching a few of the places on the map, another screen opens up and gives the player a choice between opening a chest or not, with the chest having a 50/50 chance of being a mimic
+However I've spent quite a lot of time debugging, so I haven't been able to complete that today

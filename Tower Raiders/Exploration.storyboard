@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1L-Um-aTA">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exploration View Controller-->
+        <scene sceneID="sRH-tu-aDr">
+            <objects>
+                <viewController storyboardIdentifier="ExplorationScreen" id="H1L-Um-aTA" customClass="ExplorationViewController" customModule="Tower_Raiders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uan-T2-Xzb" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-KR-0EO">
+                                <rect key="frame" x="335.66666666666669" y="62" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-kj-Uhx">
+                                <rect key="frame" x="40" y="284" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="nFQ-ob-Fes"/>
+                                    <constraint firstAttribute="width" constant="90" id="wqy-ph-bnZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Next" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextAction:" destination="H1L-Um-aTA" eventType="touchUpInside" id="tkB-QF-fwV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RNt-kj-Uhx" firstAttribute="leading" secondItem="2Ij-ve-PBK" secondAttribute="leading" constant="40" id="Qxk-y1-WMI"/>
+                            <constraint firstItem="Ac9-KR-0EO" firstAttribute="centerX" secondItem="Uan-T2-Xzb" secondAttribute="centerX" id="RzI-T3-yhq"/>
+                            <constraint firstItem="2Ij-ve-PBK" firstAttribute="bottom" secondItem="RNt-kj-Uhx" secondAttribute="bottom" constant="40" id="hcD-mb-Cix"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ij-ve-PBK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUi-Ay-ubS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="-374"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Brown Square Button" width="60" height="60"/>
+    </resources>
+</document>

@@ -7,61 +7,95 @@
 //
 
 import Foundation
-struct sessionCharStats {
-    var lvl: UInt = 0
-    var maxHP: UInt = 0
-    var maxMP: UInt = 0
-    var HP: Int = 0
-    var MP: Int = 0
-    var power: UInt = 0
-    var defense: UInt = 0
-    var magic: UInt = 0
-    var resistance: UInt = 0
-    var exp: UInt = 0
-}
-
-// data structure for characters
-struct sessionCharacterData {
-    let ID: UInt!
-    var name: String = ""
-    var charClass: String = ""
-    var pallete: UInt = 0
-    var stats: sessionCharStats = sessionCharStats()
-    
-    // IDs used for gathering data from equipment data tables
-    // default value -1 represents none
-    var weaponID: Int = -1
-    var armourID: Int = -1
-    var accessaryID1: Int = -1
-    var accessaryID2: Int = -1
-    
-    init(id: UInt, lvl: UInt, charClass: String) {
-        ID = id
-        stats.lvl = lvl
-        self.charClass = charClass
-    }
-}
 
 // handles all reading and writing of data
 class Scribe {
+    // account data
+    var playerCharacterList: [[String:String]]!
+    var playerWeaponList: [[String:String]]!
+    
+    // session data
+    var combatEnemyData: [[String:String]]!
+    var playerPartyData: [[String:String]]!
+    var route: [[String:String]]!
+    
+    // game data
+    var abilities: [[String:String]]!
+    var classBaseStats: [[String:String]]!
+    var weaponBaseStats: [[String:String]]!
+    
+    // CREATE METHOD OF CREATING MEANINGFUL DATA STRUCTURE FOR ANIMATION ITEMS
+    // animation data
+    //var animationData:
+    //var animationTemplateData:
+    
+    // temp data
+    var map: [[String:String]]!
+    
+    func read(withName: String) {
+        var fileElements = readFile(withName: withName)
+        
+        switch withName {
+        case "PlayerCharacterList":
+            playerCharacterList = fileElements
+        case "PlayerWeaponList":
+            playerWeaponList = fileElements
+        case "PlayerPartyData":
+            playerPartyData = fileElements
+        case "CombatEnemyData":
+           combatEnemyData = fileElements
+        case "Abilities":
+            abilities = fileElements
+        case "classBaseStats":
+            classBaseStats = fileElements
+        case "weaponBaseStats":
+            weaponBaseStats = fileElements
+        case "Route":
+            weaponBaseStats = fileElements
+        default:
+            if withName.hasPrefix("MapExplorationPlaces") {
+                map = fileElements
+            }
+            break
+        }
+    }
     
     // reads file and stores file data into an array of dictionaries
     // so that elements in each rows of data can be called by their field name
     func readFile(withName: String) -> [[String:String]] {
-        var fileValues = [[String:String]]()
-        let file = String(Bundle.main.path(forResource: withName, ofType: "cvs")!)
+        var fileElements = [[String:String]]()
+        let filePath = Bundle.main.path(forResource: withName, ofType: "csv")
+        var file : String!
+        do {
+            file = try String(contentsOfFile: filePath!, encoding: .utf8)
+        }
+        catch {
+            
+        }
+        
+        // Cleaning file
+        file = file.replacingOccurrences(of: "\r", with: "\n")
+        file = file.replacingOccurrences(of: "\n\n", with: "\n")
+        if file.hasSuffix("\n"){
+            file = String(file.prefix(upTo: file.index(file.endIndex, offsetBy:-1)))
+        }
+        
         var fileRows = file.components(separatedBy: "\n")
         var fieldNames = fileRows[0].components(separatedBy: ",")
+        var i = 0
         for r in fileRows {
-            if r.count != 0 {
+            if i != 0 {
                 var fields = r.components(separatedBy: ",")
                 var rowDictionary = [String:String]()
+                var j = 0
                 for f in fields {
-                    rowDictionary[fieldNames[f.count]] = f
+                    rowDictionary[fieldNames[j]] = f
+                    j = j + 1
                 }
-                fileValues.append(rowDictionary)
+                fileElements.append(rowDictionary)
             }
+            i = i + 1
         }
-    return fileValues
+    return fileElements
     }
 }

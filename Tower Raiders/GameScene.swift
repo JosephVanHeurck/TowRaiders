@@ -552,9 +552,8 @@ class GameScene: CombatScene {
         charNode5 = self.childNode(withName: "Char5") as! SKSpriteNode
         
         // testing Scribe readFile function
-        /*var scribe = Scribe()
-        var myWeaponList = scribe.readFile(withName: "WeaponList")
-        */
+        var scribe = Scribe()
+        var myWeaponList = scribe.readFile(withName: "PlayerWeaponList")
         
         var dummyAbilities = [abilityInfo]()
         /*
