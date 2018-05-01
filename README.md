@@ -4,15 +4,18 @@ https://github.com/JosephVanHeurck/towRaiders
 SID: 215077234
 
 # Game's Current State
-- Game now starts up in exploration mode
-- Player can take steps throw the map, however no events will occur
+- Please Note that the master branch contains the latest release build. For unreleased commits see the 'develop' branch.
+- Game now starts up in exploration mode.
+- Player can take steps throw the map, however events have no content as of now.
 
 # Setup
 - Open "Tower Raiders.xcodeproj" to access project in xcode
 - Run Game using the play button
 
 # Directory Structure
-- Master Directory (contains backlog.txt, changelog.txt, licences.txt and README.md)
+- Master Branch (pulls from Develop Directory and contains README.md)
+
+- Develop Branch (contains backlog.txt, changelog.txt and licences.txt)
   - Tower Raiders (Contains all the important project files)
      - Assets.xcassets (contains all assets)
      - Base.Iproj (contains storyboards for screens)
