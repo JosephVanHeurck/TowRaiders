@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        /*
         // get your storyboard
         let storyboard = UIStoryboard(name: "Exploration", bundle: nil)
         
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Because self.window is an optional you should check it's value first and assign your rootViewController
         if let window = self.window {
             window.rootViewController = rootController
-        }
+        }*/
         
         return true
     }

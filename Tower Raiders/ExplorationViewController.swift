@@ -51,6 +51,7 @@ class ExplorationViewController: UIViewController {
             // Set the scale mode to scale to fit the window
             
             scene.scaleMode = .aspectFill
+            scene.parentViewController = self
             
             // Present the scene
             view.presentScene(scene)
