@@ -41,7 +41,7 @@ class ExplorationScene: SKScene {
     var parentViewController: UIViewController!
     
     override func didMove(to view: SKView) {
-        parentViewController = self.view?.window?.rootViewController
+        //parentViewController = self.view?.window?.rootViewController
         
         mapNode = self.childNode(withName: "Map") as! SKSpriteNode
         playerNode = self.childNode(withName: "Player") as! SKSpriteNode
@@ -90,15 +90,16 @@ class ExplorationScene: SKScene {
             var move = SKAction.move(to: translatePositionFromRaw(pos: route[currentStep]), duration: 1)
             var setFinished = SKAction.run {
                 self.moveFinished = true
-                /*if self.scribe.map[Int(self.routeIDs[self.currentStep])]["PlaceType"]! == "EVENT_TREASURE" {
+                if self.scribe.map[Int(self.routeIDs[self.currentStep])]["PlaceType"]! == "EVENT_TREASURE" {
                     self.eventReady = true
                     self.eventType = .treasure
-                    //self.parentViewController.goToEventScreen()
-                    /*let storyboard = UIStoryboard(name: "Main", bundle: nil);
-                    let vc = storyboard.instantiateViewControllerWithIdentifier("MySecondSecreen") as! UIViewController // MySecondSecreen the storyboard ID
-                    self.presentViewController(vc, animated: true, completion: nil)*/
+                    
+                    var storyboard = UIStoryboard(name: "Event", bundle: nil)
+                    let newController: EventViewController = storyboard.instantiateViewController(withIdentifier: "EventScreen") as! EventViewController
+                    newController.eventType = self.eventType
+                    self.parentViewController.present(newController, animated: true, completion: nil)
                 }
-                */
+                
                 var index = Int(self.routeIDs[self.currentStep])
                 
                 var place = self.scribe.map[index]["PlaceType"]!
@@ -108,6 +109,11 @@ class ExplorationScene: SKScene {
                     self.eventReady = true
                     self.eventType = .end
                     self.currentStep = 0
+                    
+                    var storyboard = UIStoryboard(name: "Event", bundle: nil)
+                    let newController = storyboard.instantiateViewController(withIdentifier: "EventScreen")
+                    self.parentViewController.present(newController, animated: true, completion: nil)
+                    
                 }
             }
             

@@ -10,14 +10,34 @@ import UIKit
 
 class EventViewController: UIViewController {
 
+    var eventType: placeEvent?
+    
+    @IBOutlet weak var Lbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        if eventType == .treasure {
+            Lbl.text = "Treasure Event"
+        }
+        else if eventType == .end {
+            Lbl.text = "END"
+        }
+        else {
+            eventType = .none
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 

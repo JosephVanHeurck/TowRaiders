@@ -23,9 +23,6 @@ Began Exploration Module
 Created positional data for places on 'Map1'
 Created randomly generated routing(Note: needs debugging to prevent small chance of crash)
 * 27th April
-Created 'Next' Button that moves the player to the next step(place)--
--- Week 8 --
-* 2nd May
-Successfully investigated transitioning from viewController (Screen handler class) to viewController via SKScene (Game Scene Class)
+Created 'Next' Button that moves the player to the next step(place)
 
 
