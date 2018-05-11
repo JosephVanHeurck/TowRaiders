@@ -553,7 +553,7 @@ class GameScene: CombatScene {
         
         // testing Scribe readFile function
         var scribe = Scribe()
-        var myWeaponList = scribe.readFile(withName: "PlayerWeaponList")
+        var myWeaponList = scribe.readFile("PlayerWeaponList")
         
         var dummyAbilities = [abilityInfo]()
         /*

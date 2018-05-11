@@ -11,6 +11,7 @@ import SpriteKit
 
 enum placeEvent {
     case none
+    case combat
     case treasure
     case end
 }
@@ -27,6 +28,7 @@ class ExplorationScene: SKScene {
     
     var routeIDs = [UInt]()
     var route = [CGPoint]()
+    var routeEvents = [placeEvent]()
     var currentStep = 0
     
     var moveFinished = true
@@ -46,7 +48,7 @@ class ExplorationScene: SKScene {
         mapNode = self.childNode(withName: "Map") as! SKSpriteNode
         playerNode = self.childNode(withName: "Player") as! SKSpriteNode
         
-        scribe.read(withName: "MapExplorationPlaces1")
+        scribe.read("MapExplorationPlaces1")
         
         size = CGSize(width: screenWidth, height: screenHeight)
         
@@ -60,8 +62,8 @@ class ExplorationScene: SKScene {
         
         playerNode.size.width *= scaleFromMap
         playerNode.size.height *= scaleFromMap
-        playerNode.position = translatePositionFromRaw(x: 420, y: 845)
-        playerNode.zPosition = 3
+        playerNode.position = translatePositionFromRaw(x: 436, y: 549) // give start pos from file
+        playerNode.zPosition = 4
         
         
         // createRoute has a small chance of an unfixable (as far as google can tell) crash
@@ -78,8 +80,49 @@ class ExplorationScene: SKScene {
             }
         }
         
+        var combatIconTex = SKTexture(imageNamed: "PLACE_COMBAT")
+        var eventIconTex = SKTexture(imageNamed: "PLACE_EVENT")
         
+        var tempCombatNode = SKSpriteNode()
+        tempCombatNode.texture = combatIconTex
+        tempCombatNode.size = combatIconTex.size()
+        tempCombatNode.zPosition = 3
         
+        var tempEventNode = SKSpriteNode()
+        tempEventNode.texture = eventIconTex
+        tempEventNode.size = eventIconTex.size()
+        tempEventNode.zPosition = 3
+        
+        var placeIconNodes = [SKSpriteNode]()
+        
+        for m in scribe.map {
+            var newNode: SKSpriteNode!
+            var point = CGPoint(x:CGFloat(Int(m["PositionX"]!)!),y:CGFloat(Int(m["PositionY"]!)!))
+            point = translatePositionFromRaw(pos: point)
+            let place = m["PlaceType"]!
+            
+            switch place {
+            case "COMBAT":
+                tempCombatNode.position = point
+                newNode = tempCombatNode.copy() as! SKSpriteNode
+                placeIconNodes.append(newNode)
+            case "TREASURE":
+                tempEventNode.position = point
+                newNode = tempEventNode.copy() as! SKSpriteNode
+                placeIconNodes.append(newNode)
+            default:
+                break
+            }
+        }
+        
+        for i in placeIconNodes {
+            i.size.height = i.size.height * scaleFromMap
+            i.size.width = i.size.width * scaleFromMap
+            self.addChild(i)
+        }
+        
+        scribe.read("Route")
+        writeRoute()
     }
     
     func moveToNextStep() -> Void {
@@ -113,7 +156,6 @@ class ExplorationScene: SKScene {
                     var storyboard = UIStoryboard(name: "Event", bundle: nil)
                     let newController = storyboard.instantiateViewController(withIdentifier: "EventScreen")
                     self.parentViewController.present(newController, animated: true, completion: nil)
-                    
                 }
             }
             
@@ -240,6 +282,7 @@ class ExplorationScene: SKScene {
         for m in scribe.map {
             if i == next {
                 route.append(CGPoint(x: CGFloat(Int(m["PositionX"]!)!), y: CGFloat(Int(m["PositionY"]!)!)))
+                
                 j += 1
                 if j != IDs.count {
                     next = IDs[j]
@@ -254,6 +297,27 @@ class ExplorationScene: SKScene {
         routeIDs = IDs
         // returns true if function doesn't crash
         return true
+    }
+    
+    func writeRoute() -> Void {
+        scribe.route.removeAll()
+        for r in route {
+            scribe.route.append([String:String]())
+        }
+        
+        var i = 0
+        for r in route {
+            scribe.route[i]["ID"] = String(i)
+            scribe.route[i]["PlaceType"] = scribe.map[Int(routeIDs[i])]["PlaceType"]
+            if i == 0 {
+                scribe.route[0]["CurrentStepID"] = String(currentStep)
+            }
+            else {
+                scribe.route[i]["CurrentStepID"] = ""
+            }
+            i+=1
+        }
+        scribe.write("Route")
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

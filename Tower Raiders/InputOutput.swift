@@ -8,16 +8,26 @@
 
 import Foundation
 
+struct dataAndFields {
+    var data: [[String:String]]!
+    var fields: [String]!
+}
+
 // handles all reading and writing of data
 class Scribe {
     // account data
-    var playerCharacterList: [[String:String]]!
-    var playerWeaponList: [[String:String]]!
+    var playerCharacterList = [[String:String]]()
+    var playerCharacterListFields : [String]!
+    var playerWeaponList = [[String:String]]()
+    var playerWeaponListFields: [String]!
     
     // session data
-    var combatEnemyData: [[String:String]]!
-    var playerPartyData: [[String:String]]!
-    var route: [[String:String]]!
+    var combatEnemyData = [[String:String]]()
+    var combatEnemyDataFields: [String]!
+    var playerPartyData = [[String:String]]()
+    var playerPartyDataFields: [String]!
+    var route = [[String:String]]()
+    var routeFields: [String]!
     
     // game data
     var abilities: [[String:String]]!
@@ -32,37 +42,77 @@ class Scribe {
     // temp data
     var map: [[String:String]]!
     
-    func read(withName: String) {
-        var fileElements = readFile(withName: withName)
+    func read(_ withName: String) {
+        var result = readFile(withName)
+        var data = result.data
+        var fields = result.fields
         
         switch withName {
         case "PlayerCharacterList":
-            playerCharacterList = fileElements
+            playerCharacterList = data!
+            playerCharacterListFields = fields
         case "PlayerWeaponList":
-            playerWeaponList = fileElements
+            playerWeaponList = data!
+            playerWeaponListFields = fields
         case "PlayerPartyData":
-            playerPartyData = fileElements
+            playerPartyData = data!
+            playerPartyDataFields = fields
         case "CombatEnemyData":
-           combatEnemyData = fileElements
+            combatEnemyData = data!
+           combatEnemyDataFields = fields
         case "Abilities":
-            abilities = fileElements
+            abilities = data
         case "classBaseStats":
-            classBaseStats = fileElements
+            classBaseStats = data
         case "weaponBaseStats":
-            weaponBaseStats = fileElements
+            weaponBaseStats = data
         case "Route":
-            weaponBaseStats = fileElements
+            route = data!
+            routeFields = fields
         default:
             if withName.hasPrefix("MapExplorationPlaces") {
-                map = fileElements
+                map = data
             }
             break
         }
     }
     
+    func write(_ withName: String) {
+        var data: [[String:String]]!
+        var fields: [String]!
+        var type: String!
+        
+        switch withName {
+        case "PlayerCharacterList":
+            data = playerCharacterList
+            fields = playerCharacterListFields
+            type = "Account Data"
+        case "PlayerWeaponList":
+            data = playerWeaponList
+            fields = playerWeaponListFields
+            type = "Account Data"
+        case "PlayerPartyData":
+            data = playerPartyData
+            fields = playerPartyDataFields
+            type = "Session Data"
+        case "CombatEnemyData":
+            data = combatEnemyData
+            fields = combatEnemyDataFields
+            type = "Session Data"
+        case "Route":
+            data = route
+            fields = routeFields
+            type = "Session Data"
+        default:
+            break
+        }
+        
+        writeFile(withName,type,data,fields)
+    }
+    
     // reads file and stores file data into an array of dictionaries
     // so that elements in each rows of data can be called by their field name
-    func readFile(withName: String) -> [[String:String]] {
+    func readFile(_ withName: String) -> dataAndFields {
         var fileElements = [[String:String]]()
         let filePath = Bundle.main.path(forResource: withName, ofType: "csv")
         var file : String!
@@ -96,6 +146,44 @@ class Scribe {
             }
             i = i + 1
         }
-    return fileElements
+        
+    var result = dataAndFields()
+    result.data = fileElements
+    result.fields = fieldNames
+        
+    return result
+    }
+    
+    func writeFile(_ withName: String, _ type: String, _ data: [[String: String]], _ fields: [String]) -> Void {
+        var text = String()
+        
+        var i = 0
+        for f in fields {
+            text.append(f)
+            if i != fields.count - 1 {
+                text.append(",")
+            }
+            else {
+                 text.append("\n")
+            }
+            i+=1
+        }
+        
+        for d in data {
+            i = 0
+            for f in fields {
+                text.append(d[f]!)
+                if i != fields.count - 1 {
+                    text.append(",")
+                }
+                i+=1
+            }
+            text.append("\n")
+        }
+        
+        var type = ""
+        var filePath = "Data/\(type)/\(withName).csv"
+        text.write(to: &filePath)
+        
     }
 }

@@ -13,6 +13,9 @@
 		5913629520899E9300DD5863 /* licences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5913629420899E9300DD5863 /* licences.txt */; };
 		5913629720899EAA00DD5863 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5913629620899EAA00DD5863 /* README.md */; };
 		591362992089A10000DD5863 /* changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 591362982089A10000DD5863 /* changelog.txt */; };
+		5915065220A537140045321D /* Route.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5915065120A537130045321D /* Route.csv */; };
+		5915065320A537140045321D /* Route.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5915065120A537130045321D /* Route.csv */; };
+		5915065420A537140045321D /* Route.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5915065120A537130045321D /* Route.csv */; };
 		594AB4422065C2940009ED45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AB4412065C2940009ED45 /* AppDelegate.swift */; };
 		594AB4442065C2940009ED45 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4432065C2940009ED45 /* GameScene.sks */; };
 		594AB4462065C2940009ED45 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594AB4452065C2940009ED45 /* Actions.sks */; };
@@ -78,6 +81,7 @@
 		5913629420899E9300DD5863 /* licences.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = licences.txt; sourceTree = "<group>"; };
 		5913629620899EAA00DD5863 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		591362982089A10000DD5863 /* changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
+		5915065120A537130045321D /* Route.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Route.csv; path = "Tower Raiders/Data/Session Data/Route.csv"; sourceTree = "<group>"; };
 		594AB43E2065C2930009ED45 /* Tower Raiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Raiders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594AB4412065C2940009ED45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		594AB4432065C2940009ED45 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		594AB4352065C2930009ED45 = {
 			isa = PBXGroup;
 			children = (
+				5915065120A537130045321D /* Route.csv */,
 				596EA4F7208D455600138FAD /* PlayerCharacterList.csv */,
 				596EA4F8208D455600138FAD /* PlayerWeaponList.csv */,
 				596EA4FB208D457800138FAD /* CombatEnemyData.csv */,
@@ -149,9 +154,9 @@
 				596EA50F208D458900138FAD /* AnimationData.csv */,
 				596EA510208D458900138FAD /* AnimationTemplateData.csv */,
 				590074FE209198F700D022F9 /* MapExplorationPlaces1.csv */,
+				5913629420899E9300DD5863 /* licences.txt */,
 				591362982089A10000DD5863 /* changelog.txt */,
 				5913629620899EAA00DD5863 /* README.md */,
-				5913629420899E9300DD5863 /* licences.txt */,
 				59E9E350206862FB0076EC35 /* backlog.txt */,
 				594AB4402065C2930009ED45 /* Tower Raiders */,
 				594AB45B2065C2940009ED45 /* Tower RaidersTests */,
@@ -340,6 +345,7 @@
 				596EA511208D458900138FAD /* AnimationData.csv in Resources */,
 				5913629720899EAA00DD5863 /* README.md in Resources */,
 				594AB4462065C2940009ED45 /* Actions.sks in Resources */,
+				5915065220A537140045321D /* Route.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +355,7 @@
 			files = (
 				596EA501208D457900138FAD /* PlayerPartyData.csv in Resources */,
 				596EA50D208D458100138FAD /* Abilities.csv in Resources */,
+				5915065320A537140045321D /* Route.csv in Resources */,
 				596EA50A208D458100138FAD /* WeaponBaseStats.csv in Resources */,
 				596EA515208D458900138FAD /* AnimationTemplateData.csv in Resources */,
 				596EA4FE208D457900138FAD /* CombatEnemyData.csv in Resources */,
@@ -363,6 +370,7 @@
 			files = (
 				596EA502208D457900138FAD /* PlayerPartyData.csv in Resources */,
 				596EA50E208D458100138FAD /* Abilities.csv in Resources */,
+				5915065420A537140045321D /* Route.csv in Resources */,
 				596EA50B208D458100138FAD /* WeaponBaseStats.csv in Resources */,
 				596EA516208D458900138FAD /* AnimationTemplateData.csv in Resources */,
 				596EA4FF208D457900138FAD /* CombatEnemyData.csv in Resources */,

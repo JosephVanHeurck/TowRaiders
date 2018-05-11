@@ -1,5 +1,14 @@
 //// Licences ////
 
+wolfHeadRed.png is based on wolf-head.png which has a CC BY 3.0 license and can be found at http://game-icons.net/lorc/originals/wolf-head.html
+
 Placeholder art for the Knight and Enemy Knight character and enemy classes
 use a CC0 creative commons licence, which can be found at
 https://opengameart.org/content/the-knight-free-sprite
+
+
+
+Character and Monster Assets:
+https://craftpix.net/freebies/2d-fantasy-knight-free-sprite-sheets/
+https://craftpix.net/product/2d-fantasy-archer-sprite-sheets/
+https://craftpix.net/freebies/2d-fantasy-orcs-free-sprite-sheets/
