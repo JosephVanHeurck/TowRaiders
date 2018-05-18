@@ -1,11 +1,50 @@
-////// Debugging Report for Animation function //////
-// Root Bug
-// Interval variable calulated wrong, resulting in a negative value,
-// thus causing wait, move and fade in/out periods to either be 0 or causing SKAction functions to not work at all
+// Currently Doing
+create transition between end of one map to beginning of another
 
-create exploration setup based on pseudorandom routing
+// Current Backlog
 
 alter and clean animation algorithm so it listens for T instead of single enemy, single allies, etc and U instead of user
 
 have animation function parse damage/healing value as a parameter
 have animation function alter damage values based on keyword mod's percentage in texture value
+
+create ability icons
+display ability buttons in upon pressing on ability button
+allow ability buttons to pass data to combat scene
+allow other buttons to pass data to combat scene
+
+finish combat algorithm
+create combat enemy AI
+
+create final character textures
+create final character ability data
+create temporary character stat data
+create temporary gear data
+
+fix route algorithm
+///////// RELEASE
+
+// Overall Backlog
+create Tavern Screen Overlay
+
+display owned characters in characters tab
+display stats and abilities of owned characters when clicked on (character info screen)
+
+create screen that allows players to choose characters for exploration
+
+create gear data
+create gear icons
+
+display gear in gear tab with subtabs for each type
+display gear in character info screen
+open up gear screen that displays gear based on gear type selected in a list and switch character gear upon selection within list
+
+display player currency
+create character purchasing system
+
+reward player with currency after combat
+reward player with currency after events
+
+reward player with gear after combat
+reward player with gear after events
+

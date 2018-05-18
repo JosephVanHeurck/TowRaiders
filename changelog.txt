@@ -27,3 +27,14 @@ Created 'Next' Button that moves the player to the next step(place)
 -- Week 8 --
 * 2nd May
 Successfully investigated transitioning from viewController (Screen handler class) to viewController via SKScene (Game Scene Class)
+-- Week 9 --
+* 9th May
+Created map data for final map1
+* 11th May
+Fixed map display
+Place Icons are now being displayed on map
+Mostly finished write function in Scribe
+-- Week 10 --
+*15th - 18th May
+Created Event Screen
+Finishing Release
