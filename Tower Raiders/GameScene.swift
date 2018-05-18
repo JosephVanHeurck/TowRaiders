@@ -551,6 +551,26 @@ class GameScene: CombatScene {
         charNode4 = self.childNode(withName: "Char4") as! SKSpriteNode
         charNode5 = self.childNode(withName: "Char5") as! SKSpriteNode
         
+        var knightTex = SKTexture(imageNamed: "idleKnight")
+        var size = CGSize(width: knightTex.size().width / 3, height: knightTex.size().height / 3)
+        charNode0.size = size
+        charNode1.size = size
+        charNode2.size = size
+        /*
+        var orcTex = SKTexture(imageNamed: "idleOrc1")
+        var orcSize = CGSize(width: orcTex.size().width / 3, height: orcTex.size().height / 3)
+        
+        charNode3.texture = orcTex
+        charNode4.texture = orcTex
+        charNode5.texture = orcTex
+        
+        charNode3.size = size
+        charNode4.size = size
+        charNode5.size = size
+        */
+        
+        
+        
         // testing Scribe readFile function
         var scribe = Scribe()
         var myWeaponList = scribe.readFile("PlayerWeaponList")

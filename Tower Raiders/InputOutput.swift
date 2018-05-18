@@ -33,6 +33,8 @@ class Scribe {
     var abilities: [[String:String]]!
     var classBaseStats: [[String:String]]!
     var weaponBaseStats: [[String:String]]!
+    var eventInfo: [[String:String]]!
+    var script: [[String:String]]!
     
     // CREATE METHOD OF CREATING MEANINGFUL DATA STRUCTURE FOR ANIMATION ITEMS
     // animation data
@@ -59,7 +61,7 @@ class Scribe {
             playerPartyDataFields = fields
         case "CombatEnemyData":
             combatEnemyData = data!
-           combatEnemyDataFields = fields
+            combatEnemyDataFields = fields
         case "Abilities":
             abilities = data
         case "classBaseStats":
@@ -69,6 +71,10 @@ class Scribe {
         case "Route":
             route = data!
             routeFields = fields
+        case "EventInfo":
+            eventInfo = data
+        case "Script":
+            script = data
         default:
             if withName.hasPrefix("MapExplorationPlaces") {
                 map = data
@@ -114,14 +120,7 @@ class Scribe {
     // so that elements in each rows of data can be called by their field name
     func readFile(_ withName: String) -> dataAndFields {
         var fileElements = [[String:String]]()
-        let filePath = Bundle.main.path(forResource: withName, ofType: "csv")
-        var file : String!
-        do {
-            file = try String(contentsOfFile: filePath!, encoding: .utf8)
-        }
-        catch {
-            
-        }
+        var file = readFromFile(withName)
         
         // Cleaning file
         file = file.replacingOccurrences(of: "\r", with: "\n")
@@ -147,11 +146,11 @@ class Scribe {
             i = i + 1
         }
         
-    var result = dataAndFields()
-    result.data = fileElements
-    result.fields = fieldNames
+        var result = dataAndFields()
+        result.data = fileElements
+        result.fields = fieldNames
         
-    return result
+        return result
     }
     
     func writeFile(_ withName: String, _ type: String, _ data: [[String: String]], _ fields: [String]) -> Void {
@@ -164,7 +163,7 @@ class Scribe {
                 text.append(",")
             }
             else {
-                 text.append("\n")
+                text.append("\n")
             }
             i+=1
         }
@@ -181,9 +180,118 @@ class Scribe {
             text.append("\n")
         }
         
-        var type = ""
-        var filePath = "Data/\(type)/\(withName).csv"
-        text.write(to: &filePath)
-        
+        writeToFile(text, withName)
     }
+    
+    func writeToFile(_ text: String, _ withName: String) {
+        // https://stackoverflow.com/questions/24097826/read-and-write-a-string-from-text-file?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent("\(withName).csv")
+            
+            //writing
+            do {
+                try text.write(to: fileURL, atomically: false, encoding: .utf8)
+            }
+            catch {
+                /* error handling here */
+            }
+            catch {
+                /* error handling here */
+            }
+        }
+    }
+    
+    func readFromFile(_ withName: String) -> String {
+        // https://stackoverflow.com/questions/24097826/read-and-write-a-string-from-text-file?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+        
+        var text: String!
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent("\(withName).csv")
+            
+            //reading
+            do {
+                text = try String(contentsOf: fileURL, encoding: .utf8)
+            }
+            catch {
+                /* error handling here */
+            }
+        }
+        
+        return text // crashes here. checkForUserData not successfully creating files in app's file storage folder
+    }
+    
+    func checkForUserData() {
+        var text: String?
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        
+            let fileURL = dir.appendingPathComponent("Script.csv")
+        
+            //reading
+            do {
+            text = try String(contentsOf: fileURL, encoding: .utf8)
+            }
+            catch {
+            /* error handling here */
+            }
+        }
+    
+        if text != nil {
+            return
+        }
+        
+        var bundleFilePath = [String]()
+        var nameList : [String] = [
+            "Route",
+            "PlayerCharacterList",
+            "Script",
+            "PlayerWeaponList",
+            "PlayerWeaponList",
+            "CombatEnemyData",
+            "PlayerPartyData",
+            "Abilities",
+            "ClassBaseStats",
+            "WeaponBaseStats",
+            "AnimationData",
+            "AnimationTemplateData",
+            "MapExplorationPlaces1",
+            "MapExplorationPlaces2",
+            "MapExplorationPlaces3",
+            "EventInfo"
+        ]
+        
+        for n in nameList {
+            bundleFilePath.append(Bundle.main.path(forResource: n, ofType: "csv")!)
+        }
+        
+        var files = [String]()
+        do {
+            for path in bundleFilePath {
+                /*var myFile: String!
+                if path.hasSuffix("Script.csv") {
+                    do {
+                        myFile = try String(contentsOfFile: path, encoding: .utf8)
+                        var a = myFile
+                    }
+                    catch {
+                        
+                    }
+                }*/
+                files.append(try String(contentsOfFile: path, encoding: .utf8))
+            }
+        }
+        catch {
+        
+        }
+        
+        var i = 0
+        for f in files {
+            writeToFile(f, nameList[i])
+            i+=1
+        }
+    }
+    
 }
