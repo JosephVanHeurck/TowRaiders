@@ -34,3 +34,7 @@ Created map data for final map1
 Fixed map display
 Place Icons are now being displayed on map
 Mostly finished write function in Scribe
+-- Week 10 --
+*15th - 18th May
+Created Event Screen
+Finishing Release
