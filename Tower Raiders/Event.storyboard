@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,30 +14,77 @@
         <scene sceneID="JU2-82-cSk">
             <objects>
                 <viewController storyboardIdentifier="EventScreen" id="VJX-9q-jIG" customClass="EventViewController" customModule="Tower_Raiders" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aNS-7G-YPl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="aNS-7G-YPl" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNp-dE-EZP">
-                                <rect key="frame" x="155" y="53" width="65" height="21"/>
+                                <rect key="frame" x="301" y="53" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jq-Tb-d5Y">
+                                <rect key="frame" x="388.5" y="142" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="0sB-iD-HIZ"/>
+                                    <constraint firstAttribute="height" constant="90" id="3nI-ca-fSK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Option2" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2:" destination="VJX-9q-jIG" eventType="touchUpInside" id="VGf-vM-osL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaaaaaa aaaaaaa aaaaaa aaaaaaa aaaaaaa aaaaaa aaaaaaaaaa aaaaaaaa" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAD-RY-hIS">
+                                <rect key="frame" x="20" y="299" width="627" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eq6-7i-hro">
+                                <rect key="frame" x="198.5" y="142" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ZMb-ad-Bcd"/>
+                                    <constraint firstAttribute="height" constant="90" id="o4a-Vc-45m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Option1" backgroundImage="Brown Square Button">
+                                    <color key="titleColor" red="0.88110893960000003" green="0.94870740180000002" blue="0.72788649800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1:" destination="VJX-9q-jIG" eventType="touchUpInside" id="Gq7-v9-px2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oj0-8T-3Wc" firstAttribute="trailing" secondItem="xAD-RY-hIS" secondAttribute="trailing" constant="20" id="5Ug-kb-LEQ"/>
                             <constraint firstItem="pNp-dE-EZP" firstAttribute="centerX" secondItem="aNS-7G-YPl" secondAttribute="centerX" id="E4N-f5-B9j"/>
+                            <constraint firstItem="Eq6-7i-hro" firstAttribute="centerY" secondItem="aNS-7G-YPl" secondAttribute="centerY" id="HNY-jz-K66"/>
+                            <constraint firstItem="Eq6-7i-hro" firstAttribute="centerX" secondItem="aNS-7G-YPl" secondAttribute="centerX" constant="-90" id="V1i-gc-eH7"/>
+                            <constraint firstItem="oj0-8T-3Wc" firstAttribute="bottom" secondItem="xAD-RY-hIS" secondAttribute="bottom" constant="40" id="W7G-rC-HwH"/>
+                            <constraint firstItem="xAD-RY-hIS" firstAttribute="leading" secondItem="oj0-8T-3Wc" secondAttribute="leading" constant="20" id="Xaw-fU-EGv"/>
+                            <constraint firstItem="8Jq-Tb-d5Y" firstAttribute="leading" secondItem="Eq6-7i-hro" secondAttribute="trailing" constant="100" id="a1G-pT-ZTf"/>
+                            <constraint firstItem="8Jq-Tb-d5Y" firstAttribute="centerY" secondItem="aNS-7G-YPl" secondAttribute="centerY" id="iXF-AO-wBF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oj0-8T-3Wc"/>
                     </view>
                     <connections>
                         <outlet property="Lbl" destination="pNp-dE-EZP" id="Jv6-XN-Abk"/>
+                        <outlet property="option1" destination="Eq6-7i-hro" id="4eN-ck-Nxf"/>
+                        <outlet property="option2" destination="8Jq-Tb-d5Y" id="Hfd-j5-uFT"/>
+                        <outlet property="text" destination="xAD-RY-hIS" id="mM8-F5-2hy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kix-qV-TYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="-72"/>
+            <point key="canvasLocation" x="165.06746626686657" y="-72.799999999999997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Brown Square Button" width="60" height="60"/>
+    </resources>
 </document>

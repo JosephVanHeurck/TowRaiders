@@ -14,6 +14,7 @@ class ExplorationViewController: UIViewController {
 
     // Load the SKScene from 'ExplorationScene.sks'
     var scene = ExplorationScene(fileNamed: "ExplorationScene")!
+    var firstAppearance = true
     
     @IBAction func NextAction(_ sender: UIButton) {
         scene.moveToNextStep()
@@ -46,25 +47,28 @@ class ExplorationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-        if let view = self.view as! SKView? {
-            // Set the scale mode to scale to fit the window
-            
-            scene.scaleMode = .aspectFill
-            scene.parentViewController = self
-            
-            // Present the scene
-            view.presentScene(scene)
-            
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
-        
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if firstAppearance {
+            if let view = self.view as! SKView? {
+                // Set the scale mode to scale to fit the window
+                
+                scene.scaleMode = .aspectFill
+                scene.parentViewController = self
+                
+                // Present the scene
+                view.presentScene(scene)
+                
+                
+                view.ignoresSiblingOrder = true
+                
+                view.showsFPS = true
+                view.showsNodeCount = true
+                firstAppearance = false
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

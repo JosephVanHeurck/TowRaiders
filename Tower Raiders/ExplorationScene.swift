@@ -33,6 +33,8 @@ class ExplorationScene: SKScene {
     
     var moveFinished = true
     
+    var level = 1
+    
     var eventReady = false
     var eventType: placeEvent = .none
     
@@ -42,29 +44,45 @@ class ExplorationScene: SKScene {
     
     var parentViewController: UIViewController!
     
+    var placeIconNodes = [SKSpriteNode]()
+    
     override func didMove(to view: SKView) {
         //parentViewController = self.view?.window?.rootViewController
         
         mapNode = self.childNode(withName: "Map") as! SKSpriteNode
         playerNode = self.childNode(withName: "Player") as! SKSpriteNode
         
-        scribe.read("MapExplorationPlaces1")
-        
         size = CGSize(width: screenWidth, height: screenHeight)
         
         camera = cam
         scaleFromMap = size.height/mapNode.size.height
+        
+        
+        playerNode.size.width *= scaleFromMap
+        playerNode.size.height *= scaleFromMap
+        playerNode.zPosition = 4
+        
+       
         
         let newMapWidth = mapNode.size.width * scaleFromMap
         mapNode.size.width = newMapWidth
         mapNode.size.height = screenHeight
         mapNode.zPosition = 2
         
-        playerNode.size.width *= scaleFromMap
-        playerNode.size.height *= scaleFromMap
-        playerNode.position = translatePositionFromRaw(x: 436, y: 549) // give start pos from file
-        playerNode.zPosition = 4
+        scribe.checkForUserData()
         
+        setNewMap()
+    }
+    
+    func setNewMap() {
+        currentStep = 0
+        playerNode.position = translatePositionFromRaw(x: 436, y: 549)
+        
+        scribe.read("MapExplorationPlaces" + String(level))
+        
+        for p in placeIconNodes {
+            p.isHidden = true
+        }
         
         // createRoute has a small chance of an unfixable (as far as google can tell) crash
         // EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
@@ -93,8 +111,7 @@ class ExplorationScene: SKScene {
         tempEventNode.size = eventIconTex.size()
         tempEventNode.zPosition = 3
         
-        var placeIconNodes = [SKSpriteNode]()
-        
+        // placing map icons
         for m in scribe.map {
             var newNode: SKSpriteNode!
             var point = CGPoint(x:CGFloat(Int(m["PositionX"]!)!),y:CGFloat(Int(m["PositionY"]!)!))
@@ -116,13 +133,22 @@ class ExplorationScene: SKScene {
         }
         
         for i in placeIconNodes {
-            i.size.height = i.size.height * scaleFromMap
-            i.size.width = i.size.width * scaleFromMap
-            self.addChild(i)
+            if i.isHidden == false {
+                i.size.height = i.size.height * scaleFromMap
+                i.size.width = i.size.width * scaleFromMap
+                self.addChild(i)
+            }
         }
         
         scribe.read("Route")
         writeRoute()
+        
+        self.eventReady = true
+        self.eventType = .treasure
+        
+        var storyboard = UIStoryboard(name: "Event", bundle: nil)
+        let newController: EventViewController = storyboard.instantiateViewController(withIdentifier: "EventScreen") as! EventViewController
+        self.parentViewController.present(newController, animated: true, completion: nil)
     }
     
     func moveToNextStep() -> Void {
@@ -133,29 +159,54 @@ class ExplorationScene: SKScene {
             var move = SKAction.move(to: translatePositionFromRaw(pos: route[currentStep]), duration: 1)
             var setFinished = SKAction.run {
                 self.moveFinished = true
-                if self.scribe.map[Int(self.routeIDs[self.currentStep])]["PlaceType"]! == "EVENT_TREASURE" {
-                    self.eventReady = true
-                    self.eventType = .treasure
+                
+                // saves the current position in route
+                // so that the event/combat screens can load based on that
+                self.writeRoute()
+                
+                let index = Int(self.routeIDs[self.currentStep])
+                
+                let place = self.scribe.map[index]["PlaceType"]!
+                let icon = self.scribe.map[index]["IconType"]!
+                
+                if icon == "END" {
+                    //self.moveFinished = false
+                    //self.eventReady = true
+                    //self.eventType = .end
+                    //self.currentStep = 0
+                    
+                    // HAVE THIS SCOPE CALL FUNCTIONS THAT REPLACE THE BACKGROUND, REPOSITION THE PLAYER, RESET THE ROUTE/ ICONS. ALL BASED ON THE NEXT MAP.
+                    if self.level < 3 {
+                        self.level += 1
+                        self.setNewMap()
+                        self.mapNode.texture = SKTexture(imageNamed: "Map" + String(self.level))
+                    }
+                    else {
+                        var storyboard = UIStoryboard(name: "Event", bundle: nil)
+                        let newController: EventViewController = storyboard.instantiateViewController(withIdentifier: "EventScreen") as! EventViewController
+                        newController.eventType = self.eventType
+                        self.parentViewController.present(newController, animated: true, completion: nil)
+                    }
+                    
+                    /*var storyboard = UIStoryboard(name: "Event", bundle: nil)
+                    let newController = storyboard.instantiateViewController(withIdentifier: "EventScreen")
+                    self.parentViewController.present(newController, animated: true, completion: nil)*/
+                }
+                else if icon == "EVENT" {
+                    //self.eventReady = true
+                    //self.eventType = .treasure
                     
                     var storyboard = UIStoryboard(name: "Event", bundle: nil)
                     let newController: EventViewController = storyboard.instantiateViewController(withIdentifier: "EventScreen") as! EventViewController
-                    newController.eventType = self.eventType
                     self.parentViewController.present(newController, animated: true, completion: nil)
                 }
-                
-                var index = Int(self.routeIDs[self.currentStep])
-                
-                var place = self.scribe.map[index]["PlaceType"]!
-                    
-                if place == "END" {
-                    self.moveFinished = false
-                    self.eventReady = true
-                    self.eventType = .end
-                    self.currentStep = 0
-                    
-                    var storyboard = UIStoryboard(name: "Event", bundle: nil)
-                    let newController = storyboard.instantiateViewController(withIdentifier: "EventScreen")
-                    self.parentViewController.present(newController, animated: true, completion: nil)
+                else if icon == "COMBAT" {
+                    // since combat isn't properly implemented lets save that for the end of the demo
+                    if self.level == 3 && self.currentStep > 5 {
+                        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newController: GameViewController = storyboard.instantiateViewController(withIdentifier: "CombatScreen") as! GameViewController
+                        self.parentViewController.present(newController, animated: true, completion: nil)
+                    }
                 }
             }
             
@@ -188,6 +239,8 @@ class ExplorationScene: SKScene {
     }
     
     func createRoute(_ steps: Int) throws -> Bool {
+        route = [CGPoint]()
+        
         var totalItems = scribe.map.count
         var IDs = [UInt]()
         var chosen = [CGPoint]()
@@ -309,6 +362,7 @@ class ExplorationScene: SKScene {
         for r in route {
             scribe.route[i]["ID"] = String(i)
             scribe.route[i]["PlaceType"] = scribe.map[Int(routeIDs[i])]["PlaceType"]
+            scribe.route[i]["Background"] = scribe.map[Int(routeIDs[i])]["Background"]
             if i == 0 {
                 scribe.route[0]["CurrentStepID"] = String(currentStep)
             }
